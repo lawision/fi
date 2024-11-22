@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    background-image: url('img/logbg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #1abc9c;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.input-group, .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    color: #000000;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus,
+input[type="password"]:focus, 
+input[type="tel"]:focus {
+    border-color: #1abc9c;
+    background-color: #fff;
+    outline: none;
+}
+
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+button[type="submit"], .signup-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #1abc9c; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover, .signup-btn:hover {
+    background-color: #11816b; 
+    transform: scale(1.02);
+}
+
+
+.signup-link, .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-link a, .login-link a {
+    color: #1abc9c; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+.address-guide{
+    font-size: 13px;
+    color: #555;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .login-container, .signup-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button[type="submit"], .signup-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container, .signup-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button[type="submit"], .signup-btn {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

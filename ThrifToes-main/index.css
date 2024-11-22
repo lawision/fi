@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo {
+  height: 60px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #40E0D0;
+}
+
+.fa-cart-shopping, .fa-bars {
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.fa-cart-shopping:hover, .fa-bars:hover {
+  color: #40E0D0;
+}
+
+
+.submenu {
+  position: relative;
+}
+
+.submenu-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu:hover .submenu-options {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.submenu-options li {
+  padding: 3px 0;
+}
+
+.submenu-options li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  width: 120px;
+}
+
+.submenu-options li a:hover {
+  background-color: #E0F7F4;
+}
+
+.words {
+  position: relative;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.words::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: 1;
+}
+
+
+.words-content {
+  position: relative;
+  z-index: 2;
+}
+
+.words h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  width: 30%;
+  text-align:left;
+  padding-left: 100px;
+}
+
+.words p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  width: 30%;
+  text-align: justify;
+  padding-left: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .words h1,
+  .words p {
+    padding-left: 20px;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+
+.btn {
+  margin-right: 60%;
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+.btn:focus {
+  outline: 2px solid #1abc9c;
+  outline-offset: 2px;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #1abc9c;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 7px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: #1abc9c;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #1abc9c;
+  transform: scale(1.2);
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newsletter button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1abc9c;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter button:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+.newsletter button:focus {
+  outline: 2px solid #1abc9c;
+  outline-offset: 2px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+  font-size: 14px;
+}

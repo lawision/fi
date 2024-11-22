@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="confirmation.css">
+    <style>
+        /* Styles for the confirmation page */
+    </style>
+</head>
+
+<body>
+
+    <h1>Order Details</h1>
+
+    <!-- Buyer Details -->
+    <div>
+        <p><strong>Name:</strong> <span id="confirmName"></span></p>
+        <p><strong>Contact:</strong> <span id="confirmContact"></span></p>
+        <p><strong>Address:</strong> <span id="confirmAddress"></span></p>
+        <p><strong>Landmark:</strong> <span id="confirmLandmark"></span></p>
+        <p><strong>Postal Code:</strong> <span id="confirmPostalCode"></span></p>
+        <p><strong>Payment Method:</strong> <span id="confirmPaymentMethod"></span></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Brand</th>
+                <th>Color</th>
+                <th>Size</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="cartItemsTableBody">
+            <!-- Cart items will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <!-- Total Amount -->
+    <p><strong>Total Amount:</strong> <span id="totalAmount"></span></p>
+
+    <!-- Back to Shop Button -->
+    <button id="backToShop">Back to Shop</button>
+
+    <script src="confirmation.js"></script>
+</body>
+
+</html>

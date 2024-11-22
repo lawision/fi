@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" class="logo" alt="Thriftoes Logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <!-- Submenu Button -->
+                <li class="submenu">
+                    <a href="#" aria-label="More Options"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <ul class="submenu-options">
+                        <li><a href="toreceive.html">To Receive</a></li>
+                        <li><a href="purchaseHistory.html">Purchase History</a></li>
+                        <li><a href="guestindex.html" id="logoutBtn">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cartSection">
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Cart items will be dynamically loaded here -->
+            </tbody>
+        </table>
+
+        <div id="cartSummary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: <span id="subtotal">₱0.00</span></p>
+            <p>Delivery Fee: <span id="df">₱100.00</span></p>
+            <p>Total: <span id="total">₱0.00</span></p>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Admin Panel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Manage Products</a></li>
+                <li><a href="adminApproval.html">Pending Orders</a></li>
+                <li><a href="sales.html">Sales Records</a></li>
+                <li><a href="users.html">Manage Users</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Manage Products</h1>
+
+    <main>
+        <section class="product-form">
+            <h2>Add / Edit Product</h2>
+            <form id="productForm" enctype="multipart/form-data">
+                <input type="hidden" id="productId" name="productId" />
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" name="productName" maxlength="15" required>
+                <label for="productBrand">Brand</label>
+                <input type="text" id="productBrand" name="productBrand" required>
+                <label for="productSize">Size</label>
+                <input type="number" id="productSize" name="productSize" required>
+                <label for="productPrice">Price</label>
+                <input type="number" id="productPrice" name="productPrice" required>
+                <label for="productColor">Color</label>
+                <input type="text" id="productColor" name="productColor" required>
+                <label for="productDescription">Description</label>
+                <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+                <label for="productImage">Image File</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                <button type="submit" id="saveProductBtn">Save Product</button>
+            </form>
+        </section>
+
+        <section class="product-list">
+            <h2>Product List (In Shop)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Color</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Product Inventory -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="sold-product-list">
+            <h2>Sold Products</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Color</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="soldProductTableBody">
+                    <!-- Sold Products -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

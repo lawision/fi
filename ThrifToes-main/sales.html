@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Records</title>
+    <link rel="stylesheet" href="sales.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <h1>Admin Panel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Manage Products</a></li>
+                <li><a href="adminApproval.html">Pending Orders</a></li>
+                <li><a href="sales.html">Sales Records</a></li>
+                <li><a href="users.html">Manage Users</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Sales Records</h1>
+
+    <table id="salesTable">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Product Name</th>
+                <th>Size</th>
+                <th>Total Amount</th>
+                <th>Buyer Account</th> <!-- New column for buyer details -->
+            </tr>
+        </thead>
+        <tbody id="salesTableBody"></tbody>
+    </table>
+
+    <script src="sales.js"></script>
+</body>
+
+</html>
